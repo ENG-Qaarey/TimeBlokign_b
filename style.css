@@ -1,0 +1,141 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #89cff0, #4facfe);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.time-block {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.time-block input,
+.time-block button {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.time-block button {
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.time-block button:hover {
+    background: #0056b3;
+}
+
+#exportBtn,
+#importBtn {
+    flex: 0.5;
+    background: #28a745;
+    color: #fff;
+}
+
+#exportBtn:hover,
+#importBtn:hover {
+    background: #218838;
+}
+
+.time-list {
+    margin-top: 20px;
+}
+
+.time-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    flex-wrap: wrap;
+}
+
+.time-item span {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.time-item button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.time-item button:hover {
+    background: #bd2130;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .time-block input,
+    .time-block button,
+    #exportBtn,
+    #importBtn {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .time-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .time-item button {
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .time-item {
+        font-size: 0.9rem;
+    }
+}
